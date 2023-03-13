@@ -1,1 +1,10 @@
 @import "normalize.css";
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
