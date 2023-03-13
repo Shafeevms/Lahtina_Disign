@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lahtina Design</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lahtina Design</title>
+</head>
+<body>
+
+<section class="hero">
+  <div class="swiper hero__swiper">
     <header class="header">
-      <ul class="header__options">
-        <li><a href="#">Портфолио</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <img class="header__logo" src="./img/logo_gold.png" alt="логотип">
+      <div class="container header__container">
+        <ul class="header__options options">
+          <li class="options__name"><a class="options__link" href="#">Портфолио</a></li>
+          <li class="options__name"><a class="options__link" href="#">Услуги</a></li>
+          <li class="options__name"><a class="options__link" href="#">Контакты</a></li>
+        </ul>
+        <img class="header__logo" src="img/logo/logo_white.png" alt="логотип">
+        <div class="header__lang"></div>
+      </div>
     </header>
-    <script type="module" src="/js/main.js"></script>
-  </body>
+    <div class="hero__wrapper">
+      <h1 class="hero__title">ПРОЕКТИРОВАНИЕ СОВРЕМЕННЫХ ИНТЕРЬЕРОВ И РЕАЛИЗАЦИЯ</h1>
+      <a href="#" class="hero__link">ОБСУДИТЬ ПРОЕКТ</a>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-swiper-parallax="-300" data-swiper-parallax-duration="600"><img class="hero__slide" src="./img/slider/slide1.jpg" alt="интерьер"></div>
+      <div class="swiper-slide"><img class="hero__slide" src="./img/slider/slide2.jpg" alt="интерьер"></div>
+      <div class="swiper-slide"><img class="hero__slide" src="./img/slider/slide3.jpg" alt="интерьер"></div>
+    </div>
+  </div>
+</section>
+<script type="module" src="/js/main.js"></script>
+</body>
 </html>

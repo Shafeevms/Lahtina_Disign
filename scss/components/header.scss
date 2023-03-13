@@ -1,10 +1,49 @@
+@import "../color";
+
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  color: $gray-light;
   z-index: 20;
 
-  &__options {}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  &__logo {}
+  &__options {
 
-  &__lang {}
+  }
+
+  &__logo {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__lang {
+    width: 50px;
+    height: 50px;
+    outline: 1px solid red;
+  }
 }
+
+.options {
+
+  &__name {
+
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+}
+
+
