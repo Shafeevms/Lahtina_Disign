@@ -1,8 +1,11 @@
 @import "normalize.css";
 @import "reset.css";
 
-@import "components/header.scss";
-@import "components/hero.scss";
+@import "./components/header.scss";
+@import "./components/hero.scss";
+@import "./components/about.scss";
+@import "./components/team.scss";
+@import "./components/service.scss";
 
 * {
   box-sizing: border-box;
@@ -10,9 +13,14 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+
+  background: -webkit-linear-gradient(135deg, rgb(215, 205, 192), rgb(194, 177, 153));
+  background: -moz-linear-gradient(135deg, rgb(215, 205, 192), rgb(194, 177, 153));
+  background: linear-gradient(135deg, rgb(215, 205, 192), rgb(194, 177, 153));
 }
 
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  width: 100%;
 }
