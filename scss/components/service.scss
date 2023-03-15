@@ -1,0 +1,103 @@
+@import "../color.scss";
+
+.service {
+  padding-top: 50px;
+  background-color: $black;
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 100;
+    //text-align: center;
+    line-height: 1.5;
+    color: $gray-light;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+}
+
+.accordion {
+  padding: 40px;
+
+  &__header {
+    position: relative;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    width: 100%;
+    background-color: $black-light;
+    border: none;
+
+    color: $gray-mid;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    justify-self: start;
+    grid-column: 1 / 5;
+    font-size: 28px;
+  }
+
+  &__price {
+    grid-column: 5 / 7;
+
+    justify-self: start;
+
+    &:after {
+      content: " \20BD /м2";
+    }
+  }
+
+  &__description {
+    grid-column: 7 / 11;
+  }
+
+  &__link {
+    margin-right: 35px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $gray-mid;
+  }
+  &__arrow  {
+    grid-column: 12 / 13;
+    justify-self: end;
+    width: 30px;
+    height: 30px;
+    outline: 1px solid red;
+  }
+}
+
+.body {
+  padding: 40px;
+  max-height: 600px;
+  height: 100%;
+  overflow: hidden;
+  color: $gray-mid;
+  background-color: $black-mid;
+  transition: max-height .5s ease-in-out, opacity .5s ease;
+
+  &__title {
+    margin-bottom: 20px;
+
+  }
+
+  &__list {
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.close {
+  opacity: 0;
+  max-height: 0;
+}

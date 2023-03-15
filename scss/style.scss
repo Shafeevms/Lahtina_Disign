@@ -6,6 +6,7 @@
 @import "./components/about.scss";
 @import "./components/team.scss";
 @import "./components/service.scss";
+@import "./components/porfolio.scss";
 
 * {
   box-sizing: border-box;
@@ -23,4 +24,9 @@ body {
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
 }
