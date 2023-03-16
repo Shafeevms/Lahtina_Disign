@@ -1,0 +1,90 @@
+@import '../color.scss';
+
+.footer {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: $white;
+  background-color: $black;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px 0;
+    grid-template-areas:
+      "title . call write come"
+      ". . tel email address"
+      ". . . . ."
+      "by . . insta licence";
+  }
+
+  &__title {
+    grid-area: title;
+    font-size: 36px;
+    font-weight: 100;
+  }
+
+  &__subtitle {
+    padding-left: 70px;
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 10px;
+    letter-spacing: 1.1px;
+
+    &:before {
+      content: '';
+      margin-right: 20px;
+      width: 50px;
+      height: 1px;
+      background-color: $white;
+    }
+
+    &_call {
+      grid-area: call;
+    }
+
+    &_write {
+      grid-area: write;
+    }
+
+    &_come {
+      grid-area: come;
+    }
+  }
+
+  &__tel {
+    grid-area: tel;
+    justify-self: end;
+  }
+
+  &__email {
+    grid-area: email;
+    justify-self: end;
+  }
+
+  &__address {
+    grid-area: address;
+    justify-self: end;
+    max-width: 150px;
+  }
+
+  &__by {
+    grid-area: by;
+    color: $gray-dark;
+    letter-spacing: 1.1px;
+  }
+
+  &__insta {
+    grid-area: insta;
+  }
+
+  &__licence {
+    grid-area: licence;
+    justify-self: end;
+    color: $gray-light;
+    font-size: 10px;
+  }
+}

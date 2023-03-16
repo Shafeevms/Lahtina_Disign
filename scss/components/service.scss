@@ -1,14 +1,13 @@
 @import "../color.scss";
 
 .service {
-  padding-top: 50px;
+  padding-top: 80px;
   background-color: $black;
 
   &__title {
     margin-bottom: 50px;
     font-size: 36px;
     font-weight: 100;
-    //text-align: center;
     line-height: 1.5;
     color: $gray-light;
     letter-spacing: 1.6px;
@@ -17,7 +16,7 @@
 }
 
 .accordion {
-  padding: 40px;
+  padding: 40px 0;
 
   &__header {
     position: relative;

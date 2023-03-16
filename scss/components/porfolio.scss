@@ -1,6 +1,6 @@
 .portfolio {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
   background-color: $white;
 
   &__title {
@@ -11,6 +11,7 @@
 
   &__list {
     display: flex;
+
   }
 
   &__item {
@@ -22,8 +23,10 @@
 
   &__link {
     padding: 15px 50px;
+    display: block;
     border-bottom: 1px solid $gray-mid;
     border-top: 1px solid $gray-mid;
+
 
     font-size: 12px;
     font-weight: 500;
