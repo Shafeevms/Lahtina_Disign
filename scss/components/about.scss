@@ -1,12 +1,32 @@
 .about {
-  padding-top: 50px;
   position: relative;
-  display: flex;
-  justify-content: space-around;
-  height: 120vh;
+  padding-top: 80px;
+  height: 2000px;
+
+
+  &_about__wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  &__content {
+    position: absolute;
+    height: 180vw;
+    display: flex;
+    justify-content: space-around;
+
+    overflow: visible;
+    width: 100%;
+  }
+
+  &__right {
+    height: min-content;
+  }
+
 
   &__img {
     width: 20vw;
+    will-change: transform, opacity;
   }
 
   &__logo {
@@ -38,7 +58,6 @@
     }
   }
 }
-
 
 
 .gold-text {
