@@ -1,20 +1,40 @@
 @import "../color.scss";
 
 .team {
+  position: relative;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $white;
+  height: 100vh;
+  perspective: 900px;
+
+  &__bgcontainer {
+    position: absolute;
+    inset: 0;
+    background-color: $chocolate-dark;
+    z-index: 1;
+    //
+    //perspective: 800px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+
+    &_open {
+      transform: rotateX(90deg);
+      transition: transform 1s ease;
+    }
+  }
 
   &__title, &__subtitle {
-
+    position: relative;
     font-weight: 300;
     text-align: center;
     line-height: 1.5;
     color: $gray-dark;
     letter-spacing: 1.6px;
     text-transform: uppercase;
+    z-index: 5;
   }
 
   &__title {
@@ -28,9 +48,11 @@
   }
 
   &__list-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
   }
 
   &__list {
@@ -43,12 +65,15 @@
     flex-direction: column;
     align-items: center;
 
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
     &_left {
-      transform: rotate3d(0, 1, 0, 55deg);
     }
 
     &_right {
-      transform: rotate3d(1, 1, 0, 55deg);
+
     }
   }
 
@@ -67,6 +92,5 @@
     max-height: 100%;
     border-radius: 50%;
     object-fit: fill;
-
   }
 }

@@ -1,13 +1,17 @@
+@import "../color.scss";
+
 .about {
   position: relative;
   padding-top: 80px;
-  height: 2000px;
+  height: 200vh;
+  will-change: background-color;
 
 
   &_about__wrapper {
     position: relative;
     top: 0;
   }
+
 
   &__content {
     position: absolute;
@@ -20,12 +24,16 @@
   }
 
   &__right {
-    height: min-content;
+    padding-top: 60px;
+    height: 100%;
   }
 
 
   &__img {
+    position: absolute;
+    top: 600px;
     width: 20vw;
+    opacity: 0;
     will-change: transform, opacity;
   }
 
@@ -34,10 +42,16 @@
     height: 200px;
   }
 
+  &__titlewrapper {
+    margin-bottom: 30px;
+    padding: 40px;
+    position: relative;
+  }
+
   &__title {
-    margin-bottom: 10px;
     font-size: 48px;
     font-weight: 300;
+    will-change: color, transform;
   }
 
   &__subtitle {
@@ -45,89 +59,54 @@
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
-
+    color: $gray-mid;
   }
 
   &__description {
     max-width: 24vw;
     letter-spacing: 0.8px;
     line-height: 1.3;
+    color: $gray-light;
+
+    &_low {
+    }
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
   }
 }
 
+.line {
+  position: absolute;
+  background-color: $gray-dark;
 
-.gold-text {
-  /* Create a conic gradient. */
-  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
-  background: #CA4246;
-  background-color: #CA4246;
-  background: conic-gradient(
-      #986b25 16.666%,
-      #986b25 16.666%,
-      #ac8135 16.333%,
-      #986b25 33.333%,
-      #ac8135 25%,
-      #986b25 50%,
-      #cbb866 66.666%,
-      #ac8135 66.666%,
-      #9c7225 83.333%,
-      #987836 83.333%);
 
-  /* Set thee background size and repeat properties. */
-  background-size: 7%;
-  background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* Animate the text when loading the element. */
-  /* This animates it on page load and when hovering out. */
-  animation: rainbow-text-animation-rev 0.5s ease forwards;
-
-  cursor: pointer;
-}
-
-/* Add animation on hover. */
-.gold-text:hover {
-  animation: gold-text-animation 0.5s ease forwards;
-}
-
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
-@keyframes gold-text-animation {
-  0% {
-    background-size: 57%;
-    background-position: 0 0;
+  &__1 {
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 4px;
   }
-  20% {
-    background-size: 57%;
-    background-position: 0 1em;
-  }
-  100% {
-    background-size: 300%;
-    background-position: -9em 1em;
-  }
-}
 
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
-@keyframes gold-text-animation-rev {
-  0% {
-    background-size: 100%;
-    background-position: -9em 1em;
+  &__2 {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
   }
-  20% {
-    background-size: 37%;
-    background-position: 0 1em;
+
+  &__3 {
+    right: 0;
+    top: 0;
+    height: 0;
+    width: 4px;
   }
-  100% {
-    background-size: 57%;
-    background-position: 0 0;
+
+  &__4 {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 4px;
   }
 }
