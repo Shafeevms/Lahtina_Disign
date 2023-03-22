@@ -79,7 +79,7 @@ const tlTitleWrapper = gsap.timeline({
   duration: 0.5,
   ease: 'Sine.easeIn',
   scrollTrigger: {
-    markers: true,
+    // markers: true,
     trigger: '.about',
     start: 'top 80%',
     end: 'top -15%',

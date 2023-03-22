@@ -1,14 +1,16 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CSSPlugin } from'gsap/CSSPlugin';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
+
+gsap.registerPlugin(ScrollTrigger, CSSPlugin, ScrollToPlugin);
 
 const teamBgContainer = document.querySelector('.team__bgcontainer');
 const teamLeft = document.querySelector('.team__list_left');
 const teamRight = document.querySelector('.team__list_right');
+const teamSection = document.querySelector('.team');
 
-
-gsap.registerPlugin(ScrollTrigger, CSSPlugin);
 
 //  уходит бэкграунд
 
@@ -68,4 +70,23 @@ gsap.fromTo(teamRight, {
       end: '25% center',
       scrub: true,
     }
-  })
+  });
+
+
+gsap.to(window, {
+  scrollTrigger: {
+    trigger: teamSection,
+    start: "20% center",
+    end: "80% center",
+    markers: true,
+    toggleActions: 'restart none restart none',
+  },
+  duration: 0.5,
+  ease: 'power1.out',
+  scrollTo: {
+    y: '#team',
+    offsetY: 0,
+  }
+});
+
+
