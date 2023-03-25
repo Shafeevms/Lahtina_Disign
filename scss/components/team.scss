@@ -15,8 +15,6 @@
     inset: 0;
     background-color: $chocolate-dark;
     z-index: 1;
-    //
-    //perspective: 800px;
     transform-style: preserve-3d;
     transform-origin: center center;
 
@@ -81,8 +79,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border: 1px solid $gray-dark;
     border-radius: 50%;
   }

@@ -72,21 +72,22 @@ gsap.fromTo(teamRight, {
     }
   });
 
+// check in different breakpoints
 
-gsap.to(window, {
-  scrollTrigger: {
-    trigger: teamSection,
-    start: "20% center",
-    end: "80% center",
-    markers: true,
-    toggleActions: 'restart none restart none',
-  },
-  duration: 0.5,
-  ease: 'power1.out',
-  scrollTo: {
-    y: '#team',
-    offsetY: 0,
-  }
-});
+// gsap.to(window, {
+//   scrollTrigger: {
+//     trigger: teamSection,
+//     start: "20% center",
+//     end: "80% center",
+//     markers: true,
+//     toggleActions: 'restart none restart none',
+//   },
+//   duration: 0.5,
+//   ease: 'power1.out',
+//   scrollTo: {
+//     y: '#team',
+//     offsetY: 0,
+//   }
+// });
 
 
