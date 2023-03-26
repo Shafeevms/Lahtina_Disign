@@ -14,7 +14,7 @@ const teamSection = document.querySelector('.team');
 
 //  уходит бэкграунд
 
-gsap.to(teamBgContainer, {
+gsap.fromTo(teamBgContainer, {y: '-20px'},{
   duration: 1,
   opacity: 0,
   rotateX: 135,
