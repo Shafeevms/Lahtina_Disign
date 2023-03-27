@@ -11,10 +11,10 @@ const bgTimeline = gsap.timeline({
 
 bgTimeline
   .to('.about', {
-    backgroundColor: '#2c1e13',
+    backgroundColor: '#1B2645',
     duration: 4
   });
-
+// #1B2645  #2c1e13
 ScrollTrigger.create({
   // markers: true,
   trigger: '.about',

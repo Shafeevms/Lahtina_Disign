@@ -1,8 +1,8 @@
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {CustomEase} from 'gsap/CustomEase';
-import {CustomBounce} from 'gsap/CustomBounce';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { CustomEase } from 'gsap/CustomEase';
+import { CustomBounce } from 'gsap/CustomBounce';
 
 
 gsap.registerPlugin(ScrollTrigger, CustomEase, CustomBounce);

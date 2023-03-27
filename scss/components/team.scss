@@ -2,15 +2,22 @@
 
 .team {
   position: relative;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: $white;
-  height: 80vh;
+  height: 90vh;
   perspective: 900px;
 
-  &__bgcontainer {
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+
+  &__bg {
     position: absolute;
     inset: 0;
     background-color: $chocolate-dark;
@@ -27,68 +34,90 @@
   &__title, &__subtitle {
     position: relative;
     font-weight: 300;
-    text-align: center;
     line-height: 1.5;
     color: $gray-dark;
     letter-spacing: 1.6px;
+    text-align: center;
     text-transform: uppercase;
     z-index: 5;
   }
 
   &__title {
+    margin-bottom: 20px;
     font-size: 36px;
+    grid-area: title;
   }
 
   &__subtitle {
+    margin-bottom: 30px;
+    display: block;
+    grid-area: subtitle;
     font-size: 16px;
     font-weight: 100;
     max-width: 400px;
-  }
-
-  &__list-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
+    width: 100%;
   }
 
   &__list {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+
+    grid-area: list;
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &:not(:last-child) {
-      margin-bottom: 40px;
-    }
-
-    &_left {
-    }
-
-    &_right {
-
-    }
   }
 
   &__circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
-    border: 1px solid $gray-dark;
-    border-radius: 50%;
+    width: 10vmax;
+    height: 10vmax;
+    z-index: 5;
   }
 
   &__img {
+    position: relative;
     max-width: 100%;
     max-height: 100%;
     border-radius: 50%;
     object-fit: fill;
+    z-index: 10;
   }
+
+  &__name, &__position {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+#svg2 {
+  position: absolute;
+  scale: 1.6;
+  z-index: 5;
+}
+
+#svg3 {
+  position: absolute;
+  scale: 1.7;
+  z-index: 5;
+}
+
+.step12, .step13, .step14, .step15,
+.step22, .step23, .step24, .step25{
+  display: none;
+}
+
+.cls-1 {
+  fill: lightcyan;
+}
+
+.cls-2 {
+  fill: hotpink;
 }
