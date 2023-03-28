@@ -84,7 +84,23 @@
 
     &_3 {
       right: 0;
-      top: 30%;
+      top: 15%;
+    }
+
+    &_4 {
+      right: 0;
+      top: 40%;
+    }
+
+    &_5 {
+      right: 0;
+      top: 75%;
+    }
+
+    &_leader {
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 

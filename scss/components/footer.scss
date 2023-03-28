@@ -15,7 +15,7 @@
       "title . call write come"
       ". . tel email address"
       ". . . . ."
-      "by . . insta licence";
+      "by . . . licence";
   }
 
   &__title {
@@ -23,6 +23,7 @@
     font-size: 36px;
     font-weight: 100;
   }
+
 
   &__subtitle {
     padding-left: 70px;
@@ -87,6 +88,11 @@
     color: $gray-light;
     font-size: 10px;
   }
+
+  &__svg {
+    stroke-dasharray: 550 0;
+    animation: dasharray 5s infinite alternate;
+  }
 }
 
 // media queries for different breakpoints
@@ -145,5 +151,12 @@
         margin-right: 10px;
       }
     }
+  }
+}
+
+
+@keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 500;
   }
 }
