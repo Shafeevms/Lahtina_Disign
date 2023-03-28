@@ -2,13 +2,12 @@
 
 .team {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
   background-color: $white;
   height: 90vh;
   perspective: 900px;
 
   &__container {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -20,7 +19,7 @@
   &__bg {
     position: absolute;
     inset: 0;
-    background-color: $chocolate-dark;
+    background-color: $blue-dark;
     z-index: 1;
     transform-style: preserve-3d;
     transform-origin: center center;
@@ -67,10 +66,26 @@
   }
 
   &__item {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &_1 {
+      left: 0;
+      top: 20%;
+    }
+
+    &_2 {
+      left: 0;
+      top: 50%;
+
+    }
+
+    &_3 {
+      right: 0;
+      top: 30%;
+    }
   }
 
   &__circle {
