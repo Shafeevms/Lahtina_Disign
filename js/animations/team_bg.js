@@ -20,52 +20,10 @@ gsap.fromTo(teamBgContainer, {y: '-20px'}, {
   y: '100%',
   ease: 'power2.inOut',
   scrollTrigger: {
-    // markers: true,
+    markers: true,
     trigger: '.team',
     start: '-20% center',
     end: '40% center',
     scrub: true,
   }
 });
-
-// const layouts = ['first', 'second', 'third'];
-// const flipContainer = document.querySelector('.team__container');
-// let count = 0;
-//
-//
-// const myFunc = () => {
-//   const state = Flip.getState('.team__title, .team__subtitle', {
-//     props: 'align-items, justify-content',
-//     simple: true,
-//   });
-//
-//   flipContainer.classList.add(layouts[count]);
-//
-//
-//   Flip.from(state, {
-//     trigger: '.team',
-//     absolute: true,
-//     stagger: 0.07,
-//     duration: 1,
-//     ease: 'power2.inOut',
-//     // spin: curLayout === 0, // only spin when going to the "final" layout
-//     simple: true,
-//     onEnter: (elements, animation) => gsap.fromTo(elements, {opacity: 0}, {
-//       opacity: 1,
-//       delay: animation.duration() - 0.1
-//     }),
-//     onLeave: elements => gsap.to(elements, {opacity: 0})
-//   });
-//
-//   if(count < layouts.length - 1) {
-//     gsap.delayedCall(1, myFunc);
-//     flipContainer.classList.remove(layouts[count]);
-//     ++count;
-//   } else {
-//     console.log(123);
-//   }
-// }
-//
-// gsap.delayedCall(0, myFunc);
-//
-

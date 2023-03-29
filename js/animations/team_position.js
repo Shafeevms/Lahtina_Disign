@@ -1,71 +1,56 @@
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {MorphSVGPlugin} from 'gsap/MorphSVGPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger, MorphSVGPlugin);
+const head = document.querySelector('.team__head');
+const topTitle = document.querySelector('.top');
 
-const svg1 = gsap.timeline({repeat: -1, yoyo: true, ease: 'power4.out'});
-const svg2 = gsap.timeline({repeat: -1, yoyo: true, ease: 'power3.out'});
+// const picTl = gsap.timeline({
+//   scrollTrigger: {
+//     markers: true,
+//     trigger: '.team',
+//     start: '12.5% center',
+//     end: 'bottom center',
+//     scrub: true,
+//     pin: '.team__page_1',
+//   }
+// })
 
-svg1
-  .to('.step11', {morphSVG: '.step12', duration: 1.2})
-  .to('.step11', {morphSVG: '.step13', duration: 1.4}, '>')
-  .to('.step11', {morphSVG: '.step14', duration: 1}, '>')
-  .to('.step11', {morphSVG: '.step15', duration: 1.4});
-
-svg2
-  .to('.step21', {morphSVG: '.step25', duration: 1.4, delay: 4})
-  .to('.step21', {morphSVG: '.step23', duration: 1}, '>')
-  .to('.step21', {morphSVG: '.step22', duration: 1.3})
-  .to('.step21', {morphSVG: '.step24', duration: 1.3}, '>')
-  .to('.step21', {morphSVG: '.step25', duration: 1.4, delay: 4, scale: 0.9, ease: 'Sine.easeIn'})
-  .to('.step21', {morphSVG: '.step23', duration: 1}, '>')
-  .to('.step21', {morphSVG: '.step22', duration: 1.3})
-  .to('.step21', {morphSVG: '.step24', duration: 1.3}, '>');
-
-const title = document.querySelector('.team__title');
-const leader = document.querySelector('.leader');
+// picTl
+//   .to('.test_1', { opacity: 1, duration: 2, ease: 'power4'})
+//   .to('.test_2', { x: 0, duration: 2, ease: 'power4', delay: 0.5})
+//   .to('.test_3', { y: 0, opacity: 1, duration: 2, ease: 'power4.inOut', delay: 0.5})
 
 
-ScrollTrigger.create({
-  trigger: '.team',
-  // markers: true,
-  start: 'top 80%',
-  end: 'center center',
-  onEnter: () => {
-    gsap.to(title, {
-      duration: 1.5,
-      y: '10vh',
-    });
-    moveEl('.team__item_1', '20vw');
-    moveEl('.team__item_2', '15vw');
-    moveEl('.team__item_3', '-20vw');
-    moveEl('.team__item_4', '-15vw');
-    moveEl('.team__item_5', '-20vw');
-    moveEl(leader, '0', '-20vh');
-  }
-});
+// pinned head height 120vh
 
-
-const moveEl = (el, x = '0', y = '0') => {
-  gsap.fromTo(el, {
-      opacity: 0,
-    },
-    {
-      duration: 1.5,
-      opacity: 1,
-      x,
-      y
-    });
-};
-
-gsap.to('.service', {
-  backgroundColor: '#262525',
+const tlPage1 = gsap.timeline({
   scrollTrigger: {
-    trigger: '.service',
-    markers: true,
-    start: 'top 80%',
-    end: 'center center',
+    // markers: true,
+    trigger: '.team',
+    start: '40% center',
+    end: 'bottom center',
+    scrub: true,
+    pin: head,
   }
 })
+
+// opacity BIG LETTERS
+
+const tlTeam = gsap.timeline({
+  scrollTrigger: {
+    // markers: true,
+    trigger: '.team',
+    start: '-40% center',
+    end: '-3% center',
+    scrub: true,
+  }
+});
+tlTeam
+  .to(topTitle, {
+    opacity: 0,
+    duration: 2
+  })
+
+
+

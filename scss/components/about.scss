@@ -3,7 +3,7 @@
 .about {
   position: relative;
   padding-top: 80px;
-  height: 120vh;
+  height: 110vh;
   display: flex;
   justify-content: space-around;
   will-change: background-color;
@@ -44,6 +44,10 @@
     margin-bottom: 30px;
     padding: 40px;
     position: relative;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__title {
@@ -180,7 +184,6 @@
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   }
 }
-// svg animation
 
 
 
