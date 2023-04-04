@@ -7,29 +7,8 @@
   padding-right: 40px;
   position: relative;
   background-color: $white;
-  height: 100vh;
+  height: 130vh;
   perspective: 900px;
-
-  &__magazine {
-    position: absolute;
-    inset: 0;
-    background-color: gray;
-    display: flex;
-  }
-
-  &__page {
-    width: 50%;
-    height: 100vh;
-
-    &_1 {
-      position: relative;
-      background-color: #baa22a;
-    }
-
-    &_2 {
-      background-color: #986b25;
-    }
-  }
 
   &__container {
     padding-left: 50px;
@@ -39,11 +18,11 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
-    '. title title up up up '
-    '. title title . . . '
-    'main main . . . .  '
-    'main main . . . .'
-    '. . . low low low';
+    'title title . . . .'
+    'title title . . . .'
+    '. . up up up up'
+    '. . . . . .'
+    'low low low low . .';
     gap: 40px 10px;
     justify-content: center;
   }
@@ -53,9 +32,8 @@
     padding-right: 10px;
     grid-area: title;
     display: flex;
+    justify-self: center;
     flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
     max-height: 30vh;
     max-width: 30vh;
     background-color: $red;
@@ -138,14 +116,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-basis: 33%;
-    outline: 1px solid royalblue;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    width: 100%;
+    //box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
 
   &__leader {
+    padding: 30px 10px;
     grid-area: main;
-    flex-basis: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
     background-color: $gray-mid;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
@@ -164,11 +149,10 @@
 
   &__rect {
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vmax;
-    height: 30vmax;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    height: 75%;
     z-index: 5;
     border: 1px solid black;
     border-radius: 4px;
@@ -262,23 +246,3 @@
   }
 }
 
-.test {
-  position: absolute;
-  max-height: 100vh;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-
-
-  &_1 {
-    opacity: 0;
-  }
-
-  &_2 {
-    transform: translateX(-100%);
-  }
-  &_3 {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}

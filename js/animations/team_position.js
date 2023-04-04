@@ -1,39 +1,44 @@
-import { gsap } from 'gsap';
+import {gsap} from 'gsap';
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 const head = document.querySelector('.team__head');
 const topTitle = document.querySelector('.top');
-
-// const picTl = gsap.timeline({
-//   scrollTrigger: {
-//     markers: true,
-//     trigger: '.team',
-//     start: '12.5% center',
-//     end: 'bottom center',
-//     scrub: true,
-//     pin: '.team__page_1',
-//   }
-// })
-
-// picTl
-//   .to('.test_1', { opacity: 1, duration: 2, ease: 'power4'})
-//   .to('.test_2', { x: 0, duration: 2, ease: 'power4', delay: 0.5})
-//   .to('.test_3', { y: 0, opacity: 1, duration: 2, ease: 'power4.inOut', delay: 0.5})
+const upList = document.querySelector('.team__list_up');
+const bottomList = document.querySelector('.team__list_low');
 
 
 // pinned head height 120vh
 
-const tlPage1 = gsap.timeline({
-  scrollTrigger: {
-    // markers: true,
-    trigger: '.team',
-    start: '40% center',
-    end: 'bottom center',
-    scrub: true,
-    pin: head,
+
+// const moveList = gsap.timeline({
+//   // scrollTrigger: {
+//   //   // markers: true,
+//   //   trigger: '.team',
+//   //   start: '10% center',
+//   //   end: '70% center',
+//   //   scrub: true,
+//   // },
+//   ease: 'power1'
+// })
+
+
+ScrollTrigger.create({
+  trigger: '.team',
+  start: '10% center',
+  end: '70% center',
+  scrub: true,
+  onEnter: () => {
+    gsap.to(upList, {
+        x: '-20%',
+        duration: 2,
+      })
+    gsap.to(bottomList, {
+        x: '20%',
+        duration: 2,
+      });
   }
-})
+});
 
 // opacity BIG LETTERS
 
@@ -46,11 +51,10 @@ const tlTeam = gsap.timeline({
     scrub: true,
   }
 });
+
 tlTeam
   .to(topTitle, {
     opacity: 0,
-    duration: 2
-  })
-
-
+    duration: 2,
+  });
 

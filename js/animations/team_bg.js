@@ -17,10 +17,11 @@ gsap.fromTo(teamBgContainer, {y: '-20px'}, {
   rotateX: 135,
   scale: 1,
   perspective: 100,
+  display: 'none',
   y: '100%',
   ease: 'power2.inOut',
   scrollTrigger: {
-    markers: true,
+    // markers: true,
     trigger: '.team',
     start: '-20% center',
     end: '40% center',

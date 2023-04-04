@@ -10,3 +10,4 @@ import './animations/title_wrapper';
 import './animations/bg_about';
 import './animations/team_position';
 
+import './portfolio';
