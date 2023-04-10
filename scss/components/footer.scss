@@ -1,13 +1,15 @@
 @import '../color.scss';
 
 .footer {
+  position: relative;
+  height: 40vh;
   padding-top: 80px;
   padding-bottom: 20px;
   color: $white;
   background-color: $black;
 
   &__grid {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 20px 0;
@@ -16,6 +18,7 @@
       ". . tel email address"
       ". . . . ."
       "by . . . licence";
+    opacity: 0;
   }
 
   &__title {
@@ -159,4 +162,15 @@
   100% {
     stroke-dasharray: 0 500;
   }
+}
+
+.machineTitle {
+  position:absolute;
+  top:65px;
+  text-align:center;
+  width: 800px;
+  font-weight: 700;
+  font-size:120px;
+  color: $white;
+  visibility:hidden;
 }
