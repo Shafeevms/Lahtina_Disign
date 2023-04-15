@@ -3,48 +3,39 @@
 .about {
   position: relative;
   padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
   height: 110vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   will-change: background-color;
 
   &__left {
-    max-width: 33%;
+    width: 55%;
   }
-
-  &__center {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
 
   &__right {
     padding-top: 60px;
     height: 100%;
-    max-width: 33%;
+    max-width: 35%;
   }
 
 
   &__img {
     position: absolute;
+    left: 18%;
     top: 600px;
-    width: 20vw;
-    opacity: 0;
-    will-change: transform, opacity;
+    width: 25vw;
+    opacity: 1;
+    //will-change: transform, opacity;
   }
 
-  &__logo {
-    width: 200px;
-    height: 200px;
-    align-self: center;
-  }
 
   &__titlewrapper {
     margin-bottom: 30px;
     padding: 40px;
     position: relative;
-    max-width: 600px;
+    max-width: 30vmax;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +46,7 @@
     font-weight: 300;
     color: $gold;
     will-change: color, transform;
-    //text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
     &_num {
       color: $gray-light;
       font-size: 56px;
@@ -73,6 +64,7 @@
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
+    max-width: 30vmax;
     color: $gray-mid;
 
     &_num {
@@ -83,7 +75,8 @@
 
   &__description {
     margin-bottom: 250px;
-
+    max-width: 30vmax;
+    font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.3;
     color: $gray-mid;
@@ -139,10 +132,10 @@
 .award {
   position: absolute;
   top: 25%;
-  left: 32%;
+  //left: 32%;
   padding: 40px 10px;
   opacity: 0.9;
-  max-width: 450px;
+  max-width: 18vmax;
   width: 100%;
   align-self: center;
 
@@ -187,21 +180,21 @@
 
 
 
-.flying {
-  animation: fly 3s ease-in-out infinite;
-}
-
-@keyframes fly {
-  0% {
-
-    opacity: 0;
-  }
-  50% {
-
-    opacity: 1;
-  }
-  100% {
-
-    opacity: 0;
-  }
-}
+//.flying {
+//  animation: fly 3s ease-in-out infinite;
+//}
+//
+//@keyframes fly {
+//  0% {
+//
+//    opacity: 0;
+//  }
+//  50% {
+//
+//    opacity: 1;
+//  }
+//  100% {
+//
+//    opacity: 0;
+//  }
+//}

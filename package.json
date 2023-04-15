@@ -15,7 +15,6 @@
   "dependencies": {
     "gsap": "npm:@gsap/shockingly@^3.11.5",
     "normalize.css": "^8.0.1",
-    "particles.js": "^2.0.0",
     "swiper": "^9.1.0"
   }
 }

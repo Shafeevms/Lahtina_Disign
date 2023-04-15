@@ -1,15 +1,18 @@
 import { gsap } from 'gsap';
 import TextPlugin from 'gsap/TextPlugin';
 import EasePack from 'gsap/EasePack';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(TextPlugin, EasePack);
+gsap.registerPlugin(TextPlugin, EasePack, ScrollTrigger);
 
 const container = document.querySelector('.footer');
 const _sentenceEndExp = /(\.|\?|!)$/g;
 
 const footer = document.querySelector('.footer__grid');
 
-const  machineGun = (text) => {
+gsap.c
+
+const machineGun = (text) => {
   let words = text.split(" ");
   let tl = gsap.timeline({delay:0.6, onComplete: () => {
       console.log('complete');
@@ -48,4 +51,13 @@ const  machineGun = (text) => {
   }
 }
 
-machineGun("Перед тем, как появятся твои контакты, можно написать здесь текст, который будет последней каплей перед тем, как позвонить тебе, а можно и ничего не писать)))!");
+machineGun("СОЗДАЮ СЧАСТЛИВЫЙ ДИЗАЙН, ЗВОНИТЕ СЕЙЧАС!"),
+ScrollTrigger.create({
+  trigger: footer,
+  markers: true,
+  start: 'top center',
+  end: 'top center',
+  onEnter: () => console.log('onEnters'),
+  onEnterBack: () => console.log('onEnterBack'),
+  onLeave: () => console.log('onLeave'),
+});

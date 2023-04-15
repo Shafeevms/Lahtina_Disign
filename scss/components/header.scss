@@ -31,18 +31,43 @@
 .options {
 
   &__name {
-
-
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
 
   &__link {
-    font-size: 14px;
+    display: block;
+    position: relative;
+    font-size: 1vmax;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      content: attr(data-content);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:after {
+      transform: translateY(-100%);
+      font-weight: 500;
+    }
+
+    &:hover:before {
+      transform: translateY(100%);
+    }
+
+    &:hover:after {
+      transform: translateY(0);
+    }
   }
 }
 

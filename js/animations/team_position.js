@@ -1,6 +1,6 @@
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const head = document.querySelector('.team__head');
 const topTitle = document.querySelector('.top');

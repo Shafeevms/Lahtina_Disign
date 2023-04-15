@@ -33,15 +33,27 @@
   }
 
   &__title {
+    font-size: 36px;
     margin-bottom: 50px;
-    max-width: 500px;
+    max-width: 660px;
+
+    &_1 {
+      margin-bottom: 0;
+      letter-spacing: 3.8px;
+    }
   }
 
   &__link {
+    position: relative;
     padding: 15px 25px;
     font-weight: 100;
-    font-size: 16px;
-    border: 1px solid $gray-light;
+    font-size: 1vmax;
+    border: 2px solid $gray-light;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__logo {
