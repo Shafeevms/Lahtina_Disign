@@ -2,9 +2,8 @@
 
 .footer {
   position: relative;
-  height: 40vh;
+  height: 20vh;
   padding-top: 80px;
-  padding-bottom: 20px;
   color: $white;
   background-color: $black;
 
@@ -97,66 +96,6 @@
     animation: dasharray 5s infinite alternate;
   }
 }
-
-// media queries for different breakpoints
-@media screen and (max-width: 991px) {
-  .footer {
-    &__grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(8, 1fr);
-      grid-template-areas:
-          "title ."
-          "call write"
-          "come ."
-          "tel email"
-          "address address"
-          ". ."
-          "insta insta"
-          "licence licence";
-    }
-
-    &__subtitle {
-      padding-left: 0;
-      justify-self: start;
-      margin-top: 20px;
-    }
-
-    &__address {
-      max-width: none;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .footer {
-    &__grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
-          "title"
-          "call"
-          "write"
-          "come"
-          "tel"
-          "email"
-          "address"
-          "insta"
-          "licence";
-    }
-
-    &__subtitle {
-      font-size: 14px;
-      justify-self: center;
-      padding-left: 0;
-      margin-top: 20px;
-
-      &:before {
-        margin-right: 10px;
-      }
-    }
-  }
-}
-
 
 @keyframes dasharray {
   100% {

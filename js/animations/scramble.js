@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrambleTextPlugin);
 const testElement = document.querySelector('.portfolio__title');
 
 gsap.to(testElement, {
-  duration: 2,
+  duration: 1,
   scrambleText: 'ПОРТФОЛИО',
   scrollTrigger: {
     trigger: '.portfolio',

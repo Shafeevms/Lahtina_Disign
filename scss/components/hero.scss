@@ -2,6 +2,7 @@
 
 .hero {
   position: relative;
+  z-index: 10;
 
   &__swiper {
     width: 100%;
@@ -33,7 +34,7 @@
   }
 
   &__title {
-    font-size: 36px;
+    font-size: 2vmax;
     margin-bottom: 50px;
     max-width: 660px;
 
@@ -47,12 +48,16 @@
     position: relative;
     padding: 15px 25px;
     font-weight: 100;
-    font-size: 1vmax;
+    font-size: 1.5vmax;
     border: 2px solid $gray-light;
     transition: background-color .3s ease-in-out;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (max-width: 540px) {
+      font-size: 1.3vmax;
     }
   }
 

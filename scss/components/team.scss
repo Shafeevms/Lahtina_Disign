@@ -10,6 +10,7 @@
   height: 130vh;
   perspective: 900px;
   cursor: none;
+  z-index: 10;
 
   &__container {
     padding-left: 50px;
@@ -35,8 +36,8 @@
     display: flex;
     justify-self: center;
     flex-direction: column;
-    max-height: 30vh;
-    max-width: 30vh;
+    height: 15vmax;
+    width: 18vmax;
     background-color: $red;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
@@ -63,13 +64,12 @@
     line-height: 1.5;
     color: $gray-dark;
     letter-spacing: 1.6px;
-
     text-transform: uppercase;
     z-index: 5;
   }
 
   &__title {
-    font-size: 67px;
+    font-size: 3vmax;
     line-height: 1;
     font-weight: 900;
     letter-spacing: -3px;
@@ -78,7 +78,7 @@
     &_low {
       margin-bottom: auto;
       color: $white;
-      font-size: 70px;
+      font-size: 3.5vmax;
       letter-spacing: 5px;
       text-align: center;
     }
@@ -87,7 +87,7 @@
   &__subtitle {
     display: block;
     grid-area: subtitle;
-    font-size: 42px;
+    font-size: 2vmax;
     font-weight: 100;
     max-width: 400px;
     color: $white;
