@@ -5,7 +5,7 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-const scroller = ScrollSmoother.create({
+export const scroller = ScrollSmoother.create({
   smooth: 1,
   effects: true,
   smoothTouch: 0.1,

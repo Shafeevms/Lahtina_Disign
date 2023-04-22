@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { scroller } from './smoothskroller.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +11,21 @@ const aboutSection = document.querySelector('.about');
 const customSpeedElements = Array.from(aboutSection.querySelectorAll('[data-speed]'));
 const tempSpeedArray = ['0.6', '1.8', '1.1', '1.1', '0.88', '0.93'];
 
-mm.add('(min-width: 540px)', () => {
+const controlSpeedAnimation = () => {
+  if (mediaQuery.matches) {
+    customSpeedElements.forEach((el, index) => {
+      scroller.effects(customSpeedElements[index], {speed: 1});
+    })
+    ScrollTrigger.refresh();
+  } else {
+    customSpeedElements.forEach((el, index) => {
+      scroller.effects(customSpeedElements[index], {speed: tempSpeedArray[index]});
+    })
+    ScrollTrigger.refresh();
+  }
+};
+
+mm.add('(min-width: 541px)', () => {
   const bgTimeline = gsap.timeline({
     ease: 'power2.out',
     paused: true,
@@ -35,27 +50,10 @@ mm.add('(min-width: 540px)', () => {
   });
 });
 
-mediaQuery.addEventListener('change', e => {
-  if (e.matches) {
-    customSpeedElements.forEach((el, index) => {
-      el.dataset.speed = '1';
-    });
-  } else {
-    customSpeedElements.forEach((el, index) => {
-      el.dataset.speed = String(tempSpeedArray[index]);
-    });
-  }
+mediaQuery.addEventListener('change', () => {
+  controlSpeedAnimation();
 });
 
 window.addEventListener('load', () => {
-  if (mediaQuery.matches) {
-    console.log(1);
-    customSpeedElements.forEach((el) => {
-      console.log(2);
-      el.dataset.speed = '1';
-    });
-  }
+  controlSpeedAnimation();
 })
-
-//TODO решить вопрос с data-speed при load страницы
-// https://greensock.com/docs/v3/Plugins/ScrollSmoother
