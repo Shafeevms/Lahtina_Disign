@@ -1,29 +1,15 @@
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { scroller } from './smoothskroller.js';
+import { toggleAnimationOnMediaQuery } from './toggleAnimation.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
-const mediaQuery = window.matchMedia('(max-width: 540px)');
 const aboutSection = document.querySelector('.about');
-const customSpeedElements = Array.from(aboutSection.querySelectorAll('[data-speed]'));
-const tempSpeedArray = ['0.6', '1.8', '1.1', '1.1', '0.88', '0.93'];
+const aboutSpeedElements = Array.from(aboutSection.querySelectorAll('[data-speed]'));
+const aboutSpeedArray = ['0.6', '1.8', '1.1', '1.1', '0.88', '0.93'];
 
-const controlSpeedAnimation = () => {
-  if (mediaQuery.matches) {
-    customSpeedElements.forEach((el, index) => {
-      scroller.effects(customSpeedElements[index], {speed: 1});
-    })
-    ScrollTrigger.refresh();
-  } else {
-    customSpeedElements.forEach((el, index) => {
-      scroller.effects(customSpeedElements[index], {speed: tempSpeedArray[index]});
-    })
-    ScrollTrigger.refresh();
-  }
-};
 
 mm.add('(min-width: 541px)', () => {
   const bgTimeline = gsap.timeline({
@@ -50,10 +36,4 @@ mm.add('(min-width: 541px)', () => {
   });
 });
 
-mediaQuery.addEventListener('change', () => {
-  controlSpeedAnimation();
-});
-
-window.addEventListener('load', () => {
-  controlSpeedAnimation();
-})
+toggleAnimationOnMediaQuery(aboutSpeedElements, aboutSpeedArray, 540);

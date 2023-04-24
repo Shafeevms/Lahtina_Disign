@@ -1,43 +1,34 @@
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {toggleAnimationOnMediaQuery} from './toggleAnimation.js';
 
-const head = document.querySelector('.team__head');
 const topTitle = document.querySelector('.top');
 const upList = document.querySelector('.team__list_up');
 const bottomList = document.querySelector('.team__list_low');
+const teamSection = document.querySelector('.team__container');
+const teamSpeedElements = Array.from(teamSection.querySelectorAll('[data-speed]'));
+const teamSpeedArray = ['0.8', '0.9'];
+const mm = gsap.matchMedia();
 
-
-// pinned head height 120vh
-
-
-// const moveList = gsap.timeline({
-//   // scrollTrigger: {
-//   //   // markers: true,
-//   //   trigger: '.team',
-//   //   start: '10% center',
-//   //   end: '70% center',
-//   //   scrub: true,
-//   // },
-//   ease: 'power1'
-// })
-
-
-ScrollTrigger.create({
-  trigger: '.team',
-  start: '10% center',
-  end: '70% center',
-  scrub: true,
-  onEnter: () => {
-    gsap.to(upList, {
+mm.add('(min-width: 850px)', () => {
+  ScrollTrigger.create({
+    trigger: '.team',
+    start: '10% center',
+    end: '70% center',
+    scrub: true,
+    onEnter: () => {
+      gsap.to(upList, {
         x: '-20%',
         duration: 2,
       })
-    gsap.to(bottomList, {
+      gsap.to(bottomList, {
         x: '20%',
         duration: 2,
       });
-  }
+    }
+  });
+
 });
 
 // opacity BIG LETTERS
@@ -58,3 +49,4 @@ tlTeam
     duration: 2,
   });
 
+toggleAnimationOnMediaQuery(teamSpeedElements, teamSpeedArray, 1024);
