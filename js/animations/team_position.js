@@ -11,7 +11,7 @@ const teamSpeedElements = Array.from(teamSection.querySelectorAll('[data-speed]'
 const teamSpeedArray = ['0.8', '0.9'];
 const mm = gsap.matchMedia();
 
-mm.add('(min-width: 850px)', () => {
+mm.add('(min-width: 1024px)', () => {
   ScrollTrigger.create({
     trigger: '.team',
     start: '10% center',
