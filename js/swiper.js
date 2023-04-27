@@ -8,4 +8,11 @@ const headerSwiper = new Swiper('.hero__swiper', {
   parallax: true,
 });
 
+const portfolioSwiper = new Swiper('.portfolio__swiper', {
+  autoplay: true,
+  speed: 2000,
+  loop: true,
+  slidesPerView: 3,
+});
+
 
