@@ -14,10 +14,19 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1px;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
   }
 
   &__swiper {
-    display: none !important;
+    //display: none !important;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
+
   }
 }
 

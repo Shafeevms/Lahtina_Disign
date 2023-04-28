@@ -31,3 +31,4 @@ const controlSpeedAnimation = (elementsArray, speedArray, mediaQuery) => {
     ScrollTrigger.refresh();
   }
 };
+
