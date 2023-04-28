@@ -5,30 +5,29 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const toggleAnimationOnMediaQuery = (elements, speedArray, media) => {
-  const mediaQuery = window.matchMedia(`(max-width: ${media}px)`);
+
+export const toggleAnimationOnMedia = (num, func, ...rest) => {
+  const mediaQuery = window.matchMedia(`(max-width: ${num}px)`);
 
   mediaQuery.addEventListener('change', () => {
-    controlSpeedAnimation(elements, speedArray, mediaQuery);
+    func(mediaQuery, ...rest);
   });
 
   window.addEventListener('load', () => {
-    controlSpeedAnimation(elements, speedArray, mediaQuery);
+    func(mediaQuery, ...rest);
   })
-};
+}
 
-const controlSpeedAnimation = (elementsArray, speedArray, mediaQuery) => {
-
+export const controlSpeed = (mediaQuery, elementsArray, speedArray) => {
   if (mediaQuery.matches) {
     elementsArray.forEach((el, index) => {
-      scroller.effects(elementsArray[index], {speed: 1});
+      scroller.effects(elementsArray[index], { speed: 1 });
     })
     ScrollTrigger.refresh();
   } else {
     elementsArray.forEach((el, index) => {
-      scroller.effects(elementsArray[index], {speed: speedArray[index]});
+      scroller.effects(elementsArray[index], { speed: speedArray[index] });
     })
     ScrollTrigger.refresh();
   }
-};
-
+}

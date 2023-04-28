@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import {toggleAnimationOnMediaQuery} from './toggleAnimation.js';
+import { controlSpeed, toggleAnimationOnMedia } from './toggleAnimation.js';
 
 const topTitle = document.querySelector('.top');
 const upList = document.querySelector('.team__list_up');
@@ -49,4 +49,4 @@ tlTeam
     duration: 2,
   });
 
-toggleAnimationOnMediaQuery(teamSpeedElements, teamSpeedArray, 1024);
+toggleAnimationOnMedia(1024, controlSpeed, teamSpeedElements, teamSpeedArray);

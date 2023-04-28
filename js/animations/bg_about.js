@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { toggleAnimationOnMediaQuery } from './toggleAnimation.js';
+import { toggleAnimationOnMedia, controlSpeed } from './toggleAnimation.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,4 +36,4 @@ mm.add('(min-width: 541px)', () => {
   });
 });
 
-toggleAnimationOnMediaQuery(aboutSpeedElements, aboutSpeedArray, 540);
+toggleAnimationOnMedia(540, controlSpeed, aboutSpeedElements, aboutSpeedArray);

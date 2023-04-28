@@ -1,7 +1,9 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import { toggleAnimationOnMedia } from './animations/toggleAnimation.js';
 
-const mediaQuery = window.matchMedia(`(max-width: 900px)`);
+const portfolioSwiperContainer = document.querySelector('.portfolio__swiper');
+
 
 const headerSwiper = new Swiper('.hero__swiper', {
   autoplay: true,
@@ -11,22 +13,23 @@ const headerSwiper = new Swiper('.hero__swiper', {
   parallax: true,
 });
 
-const enablePortfolioSwiper = () => {
-  const portfolioSwiper = new Swiper('.portfolio__swiper', {
-    autoplay: true,
-    speed: 2000,
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 10,
-  });
-}
+const portfolioSwiper = new Swiper(portfolioSwiperContainer, {
+  autoplay: true,
+  speed: 2000,
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 3,
+});
 
-mediaQuery.addEventListener('change', () => {
+
+export const togglePortfolioSwiper = (mediaQuery) => {
   if (mediaQuery.matches) {
-    console.log(1);
+    portfolioSwiperContainer.classList.remove('visually-hidden');
+    portfolioSwiper.update();
   } else {
-    console.log(0);
+    portfolioSwiperContainer.classList.add('visually-hidden');
   }
-})
+};
 
-enablePortfolioSwiper();
+
+toggleAnimationOnMedia(900, togglePortfolioSwiper);
