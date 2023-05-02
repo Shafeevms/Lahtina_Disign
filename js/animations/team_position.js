@@ -28,7 +28,6 @@ mm.add('(min-width: 1024px)', () => {
       });
     }
   });
-
 });
 
 // opacity BIG LETTERS

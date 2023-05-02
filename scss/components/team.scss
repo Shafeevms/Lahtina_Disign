@@ -3,7 +3,7 @@
 .team {
   position: relative;
   background-color: $white;
-  height: 120vh;
+  min-height: 70vh;
   perspective: 900px;
   cursor: none;
   z-index: 10;
@@ -19,20 +19,18 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 150px 1fr 1fr;
     grid-template-areas:
     'title title . . . . . .'
     'title title . up up up up up'
-    '. . . . . . . .'
-    'low low low low low . . .'
-    '. . . . . . . .';
-    //gap: 40px 10px;
+    'low low low low low . . .';
+    gap: 45px 0px;
     justify-content: center;
 
     @media screen and (max-width: 1023px) {
       padding: 0;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 180px 1fr 1fr;
+      grid-template-rows: 170px 1fr 1fr;
       grid-template-areas:
         'title . . . '
         'up up up up'
@@ -199,14 +197,6 @@
     }
   }
 
-  //&__rect {
-  //  margin-bottom: 20px;
-  //  height: 75%;
-  //  z-index: 5;
-  //  border: 1px solid black;
-  //  border-radius: 4px;
-  //}
-
   &__img {
     position: relative;
     max-width: 100%;
@@ -225,6 +215,10 @@
   &__name {
     margin-bottom: 10px;
     font-size: 28px;
+
+    @media screen and (max-width: 320px) {
+      font-size: 24px;
+    }
   }
 
   &__position {
@@ -237,7 +231,11 @@
     }
 
     @media screen and (max-width: 768px) {
-      padding-left: 20px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 2vmax;
     }
   }
 }

@@ -27,11 +27,16 @@
     width: 10vmax;
     height: 10vmax;
 
+    @media screen and (max-width: 1024px) {
+      width: 13vmax;
+      height: 13vmax;
+    }
+
     @media screen and (min-width: 481px) and (max-width: 768px) {
       order: -1;
 
-      width: 12vmax;
-      height: 12vmax;
+      width: 14vmax;
+      height: 14vmax;
     }
 
     @media screen and (max-width: 480px) {
@@ -47,6 +52,10 @@
 }
 
 .options {
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    padding-top: 20px;
+  }
 
   &__name {
     &:not(:last-child) {
