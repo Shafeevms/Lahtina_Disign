@@ -19,6 +19,17 @@ const portfolioSwiper = new Swiper(portfolioSwiperContainer, {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 3,
+  breakpoints: {
+    240: {
+      slidesPerView: 1,
+    },
+    570: {
+      slidesPerView: 2,
+    },
+    840: {
+      slidesPerView: 3,
+    }
+  }
 });
 
 

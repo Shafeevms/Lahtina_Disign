@@ -10,12 +10,11 @@ const _sentenceEndExp = /(\.|\?|!)$/g;
 
 const footer = document.querySelector('.footer__grid');
 
-gsap.c
 
 const machineGun = (text) => {
   let words = text.split(" ");
   let tl = gsap.timeline({delay:0.6, onComplete: () => {
-      console.log('complete');
+      // console.log('complete');
       gsap.to(footer, {display: 'grid', opacity: 1, duration: 1})
     }
   });
@@ -51,13 +50,13 @@ const machineGun = (text) => {
   }
 }
 
-machineGun("СОЗДАЮ СЧАСТЛИВЫЙ ДИЗАЙН, ЗВОНИТЕ СЕЙЧАС!"),
-ScrollTrigger.create({
-  trigger: footer,
-  markers: true,
-  start: 'top center',
-  end: 'top center',
-  onEnter: () => console.log('onEnters'),
-  onEnterBack: () => console.log('onEnterBack'),
-  onLeave: () => console.log('onLeave'),
-});
+// machineGun("СОЗДАЮ СЧАСТЛИВЫЙ ДИЗАЙН, ЗВОНИТЕ СЕЙЧАС!"),
+// ScrollTrigger.create({
+//   trigger: footer,
+//   // markers: true,
+//   start: 'top center',
+//   end: 'top center',
+//   onEnter: () => console.log('onEnters'),
+//   onEnterBack: () => console.log('onEnterBack'),
+//   onLeave: () => console.log('onLeave'),
+// });
