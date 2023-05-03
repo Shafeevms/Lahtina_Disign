@@ -36,10 +36,20 @@
     min-height: 80px;
     background-color: $black-light;
     border: none;
-
     color: $gray-mid;
     font-weight: 300;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover .accordion__arrow:before {
+      transform: rotate(240deg);
+      background-color: $gold;
+    }
+
+    &:hover .accordion__arrow:after {
+      transform: rotate(-240deg);
+      background-color: $gold;
+    }
 
     @media screen and (max-width: 786px) {
       grid-template-rows: 1fr 1fr;
@@ -127,6 +137,12 @@
     margin-right: 35px;
     padding-bottom: 3px;
     border-bottom: 1px solid $gray-mid;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $gold;
+      border-color: $gold;
+    }
 
     @media screen and (max-width: 610px) {
       margin-right: 15px;
@@ -134,11 +150,33 @@
   }
 
   &__arrow {
+    position: relative;
     grid-column: 12 / 13;
     justify-self: end;
     width: 30px;
     height: 30px;
-    outline: 1px solid red;
+    //outline: 1px solid red;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      width: 80%;
+      height: 1px;
+      background-color: $gray-mid;
+      transition: all .3s ease-in;
+    }
+
+    &:before {
+      transform: rotate(60deg);
+      left: -3px;
+    }
+
+    &:after {
+      transform: rotate(-60deg);
+      right: -3px;
+    }
+
 
     @media screen and (max-width: 786px) {
       grid-row: 1 / 3;
