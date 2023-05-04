@@ -5,7 +5,7 @@ import { toggleAnimationOnMedia } from './animations/toggleAnimation.js';
 const portfolioSwiperContainer = document.querySelector('.portfolio__swiper');
 
 
-const headerSwiper = new Swiper('.hero__swiper', {
+new Swiper('.hero__swiper', {
   autoplay: true,
   speed: 4000,
   loop: true,

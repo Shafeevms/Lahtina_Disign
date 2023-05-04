@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import { scroller } from './smoothskroller.js';
+import { scroller } from './smoothScroller';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
