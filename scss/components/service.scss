@@ -20,6 +20,10 @@
     color: $gray-light;
     letter-spacing: 1.6px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 800px) {
+      padding-left: 30px;
+    }
   }
 }
 

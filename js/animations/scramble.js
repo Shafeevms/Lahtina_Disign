@@ -4,10 +4,11 @@ import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin';
 gsap.registerPlugin(ScrambleTextPlugin);
 
 const testElement = document.querySelector('.portfolio__title');
+const text = testElement.dataset.content;
 
 gsap.to(testElement, {
   duration: 1,
-  scrambleText: 'ПОРТФОЛИО',
+  scrambleText: text,
   scrollTrigger: {
     trigger: '.portfolio',
     toggleActions: 'play reset play reset'

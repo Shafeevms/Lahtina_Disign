@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+<!--  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
@@ -18,20 +18,19 @@
         <header class="header">
           <div class="container header__container">
             <ul class="header__options options">
-              <li class="options__name"><a class="options__link" data-content="Портфолио" href="#portfolio">Портфолио</a></li>
-              <li class="options__name"><a class="options__link" data-content="Услуги" href="#service">Услуги</a></li>
-              <li class="options__name"><a class="options__link" data-content="Контакты" href="#footer">Контакты</a></li>
+              <li class="options__name"><a class="options__link" data-content="###HEADER_MENU_PORTFOLIO###" href="#portfolio">###HEADER_MENU_PORTFOLIO###</a></li>
+              <li class="options__name"><a class="options__link" data-content="###HEADER_MENU_SERVICES###" href="#service">###HEADER_MENU_SERVICES###</a></li>
+              <li class="options__name"><a class="options__link" data-content="###HEADER_MENU_CONTACTS###" href="#footer">###HEADER_MENU_CONTACTS###</a></li>
             </ul>
             <img class="header__logo" src="img/logo/logo_white.png" alt="логотип">
-            <div class="header__lang"></div>
+            <a class="header__lang" href="###SWITCH_LANG_URL###"></a>
           </div>
         </header>
         <div class="hero__wrapper">
-          <h1 class="visually-hidden">ЖИЛЫЕ И КОММЕРЧЕСКИЕ
-            ПРОЕКТЫ И ИХ РЕАЛИЗАЦИЯ</h1>
-          <h2 class="hero__title hero__title_1">ЖИЛЫЕ И КОММЕРЧЕСКИЕ</h2>
-          <h2 class="hero__title">ПРОЕКТЫ И&nbsp;ИХ РЕАЛИЗАЦИЯ</h2>
-          <a href="#" class="hero__link">ОБСУДИТЬ ПРОЕКТ</a>
+          <h1 class="visually-hidden">###HERO_H1###</h1>
+          <h2 class="hero__title hero__title_1">###HERO_TITLE1###</h2>
+          <h2 class="hero__title">###HERO_TITLE2###</h2>
+          <button class="hero__link">###HERO_BUTTON###</button>
         </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
@@ -47,8 +46,7 @@
         <img data-speed='0.6' src="./img/about/lahtina.webp" alt="Виктория Лахтина" class="about__img">
         <div data-speed="1.8" class="about__award award">
           <h2 class="award__name">ADD AWARDS</h2>
-          <h3 class="award__title">Высокая оценка жюри и победа в профессиональной независимой Премии для архитекторов,
-            дизайнеров и девелоперов ADD AWARDS</h3>
+          <h3 class="award__title">###ABOUT_AWARD_TITLE###</h3>
         </div>
       </div>
       <div class="about__right">
@@ -59,25 +57,19 @@
           <div class="line line__4"></div>
           <h2 class="about__title">LAHTINA.DESIGN</h2>
         </div>
-        <!--        <h3 data-speed="1.1" class="about__subtitle">Студия дизайна интерьера полного цикла</h3>-->
-        <p data-speed="1.1" class="about__description">Профессиональная команда студии создает пространства от идеи до
-          реализации.
-          Мы работаем не на количество, а на качество. Это позволяет нам полностью погружаться в процесс разработки
-          и реализации проекта, создавать уникальные объекты, отражающие внутренний мир заказчика и решающие все задачи
-          проекта.
-        </p>
+        <p data-speed="1.1" class="about__description">###ABOUT_DESCRIPTION###</p>
         <ul class="about__numbers">
           <li data-speed="0.88" class="about__number">
             <h3 class="about__title about__title_num">120</h3>
-            <span class="about__subtitle about__subtitle_num">проектов</span>
+            <span class="about__subtitle about__subtitle_num">###ABOUT_SUBTITLE_PROJECTS###</span>
           </li>
           <li data-speed="0.93" class="about__number">
             <h3 class="about__title about__title_num">120</h3>
-            <span class="about__subtitle about__subtitle_num">проектов</span>
+            <span class="about__subtitle about__subtitle_num">###ABOUT_SUBTITLE_PROJECTS###</span>
           </li>
           <li class="about__number">
             <h3 class="about__title about__title_num">120</h3>
-            <span class="about__subtitle about__subtitle_num">проектов</span>
+            <span class="about__subtitle about__subtitle_num">###ABOUT_SUBTITLE_PROJECTS###</span>
           </li>
         </ul>
       </div>
@@ -87,36 +79,35 @@
       <div id="particles-js"></div>
       <div class="team__bg"></div>
       <div class="team__top top">
-        <h2 class="top__title">КОМАНДА СТУДИИ</h2>
+        <h2 class="top__title">###TEAM_TITLE###</h2>
       </div>
       <div class="team__container">
         <div class="team__head">
-          <h2 class="team__title">команда</h2>
-          <h2 class="team__title team__title_low">студии</h2>
-          <h3 class="team__subtitle">Lorem ipsum dolor sit.
-          </h3>
+          <h2 class="team__title">###TEAM_HEAD_SUBTITLE1###</h2>
+          <h2 class="team__title team__title_low">###TEAM_HEAD_SUBTITLE2###</h2>
+          <h3 class="team__subtitle">###TEAM_HEAD_DESCRIPTION###</h3>
         </div>
         <ul data-speed="1.3" class="team__list team__list_up">
           <li class="team__item">
             <div class="team__circle">
               <img class="team__img" src="./img/team/1.png" alt="Елизавета">
             </div>
-            <h3 class="team__name">Виктория</h3>
-            <h4 class="team__position">Вдохновитель проекта</h4>
+            <h3 class="team__name">###TEAM_PERSON_1###</h3>
+            <h4 class="team__position">###TEAM_PERSON_1_POSITION###</h4>
           </li>
           <li class="team__item">
             <div class="team__circle">
               <img class="team__img" src="./img/team/2.png" alt="Елизавета">
             </div>
-            <h3 class="team__name">Елизавета</h3>
-            <h4 class="team__position">визуализатор визуализатор</h4>
+            <h3 class="team__name">###TEAM_PERSON_2###</h3>
+            <h4 class="team__position">###TEAM_PERSON_2_POSITION###</h4>
           </li>
           <li class="team__item">
             <div class="team__circle">
               <img class="team__img" src="./img/team/3.webp" alt="Елизавета">
             </div>
-            <h3 class="team__name">Елизавета</h3>
-            <h4 class="team__position">визуализатор</h4>
+            <h3 class="team__name">###TEAM_PERSON_3###</h3>
+            <h4 class="team__position">###TEAM_PERSON_3_POSITION###</h4>
           </li>
         </ul>
         <ul data-speed="1" class="team__list team__list_low">
@@ -124,159 +115,108 @@
             <div class="team__circle">
               <img class="team__img" src="./img/team/4.webp" alt="Елизавета">
             </div>
-            <h3 class="team__name">Елизавета</h3>
-            <h4 class="team__position">визуализатор визуализатор</h4>
+            <h3 class="team__name">###TEAM_PERSON_4###</h3>
+            <h4 class="team__position">###TEAM_PERSON_4_POSITION###</h4>
           </li>
           <li class="team__item">
             <div class="team__circle">
               <img class="team__img" src="./img/team/5.webp" alt="Елизавета">
             </div>
-            <h3 class="team__name">Елизавета</h3>
-            <h4 class="team__position">визуализатор</h4>
+            <h3 class="team__name">###TEAM_PERSON_5###</h3>
+            <h4 class="team__position">###TEAM_PERSON_5_POSITION###</h4>
           </li>
           <li class="team__item">
             <div class="team__circle">
               <img class="team__img" src="./img/team/6.webp" alt="Елизавета">
             </div>
-            <h3 class="team__name">Елизавета</h3>
-            <h4 class="team__position">визуализатор</h4>
+            <h3 class="team__name">###TEAM_PERSON_6###</h3>
+            <h4 class="team__position">###TEAM_PERSON_6_POSITION###</h4>
           </li>
         </ul>
       </div>
     </section>
     <section id="service" class="service">
       <div class="container">
-        <h2 class="service__title">УСЛУГИ</h2>
+        <h2 class="service__title">###SERVICE_TITLE###</h2>
         <div class="service-accordion accordion">
           <div class="accordion__item">
             <div class="accordion__header">
-              <h2 class="accordion__title">ДИЗАЙН ПРОЕКТ</h2>
+              <h2 class="accordion__title">###ACCORDION1_TITLE###</h2>
               <span class="accordion__price">5000</span>
               <div class="accordion__description">
-                <a href="#" class="accordion__link">ПРИМЕР ПРОЕКТА</a>
-                <span>СОСТАВ ПРОЕКТА</span>
+                <a href="#" class="accordion__link">###ACCORDION1_LINK###</a>
+                <span>###ACCORDION1_DESCRIPTION###</span>
               </div>
               <div class="accordion__arrow"></div>
             </div>
             <div class="accordion__body body close">
-              <h3 class="body__title">ВИЗУАЛИЗАЦИИ:</h3>
+              <h3 class="body__title">###ACCORDION1_BODY_TITLE1###</h3>
               <ul class="body__list">
                 <li class="body__item">
-                  Перспективные 3D изображения утвержденного планировочного решения
+                  ###ACCORDION1_BODY_LIST1_ITEM1###
                 </li>
               </ul>
-              <h3 class="body__title">ЧЕРТЕЖИ:</h3>
+              <h3 class="body__title">###ACCORDION1_BODY_TITLE2###</h3>
               <ul class="body__list">
                 <li class="body__item">
-                  Обмерный план до демонтажа
+                  ###ACCORDION1_BODY_LIST2_ITEM1###
                 </li>
                 <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
+                  ###ACCORDION1_BODY_LIST2_ITEM2###
                 </li>
               </ul>
-              <h3 class="body__title">ВЕДОМОСТИ:</h3>
+              <h3 class="body__title">###ACCORDION1_BODY_TITLE3###</h3>
               <ul class="body__list">
                 <li class="body__item">
-                  Ведомость чистовой отделки помещений
+                  ###ACCORDION1_BODY_LIST3_ITEM1###
                 </li>
                 <li class="body__item">
-                  Ведомость чистовой отделки помещений
+                  ###ACCORDION1_BODY_LIST3_ITEM2###
                 </li>
                 <li class="body__item">
-                  Ведомость чистовой отделки помещений
-                </li>
-                <li class="body__item">
-                  Ведомость чистовой отделки помещений
-                </li>
-                <li class="body__item">
-                  Ведомость чистовой отделки помещений
+                  ###ACCORDION1_BODY_LIST3_ITEM3###
                 </li>
               </ul>
             </div>
           </div>
           <div class="accordion__item">
             <div class="accordion__header">
-              <h2 class="accordion__title">ГЕНЕРАЛЬНЫЙ НАДЗОР</h2>
+              <h2 class="accordion__title">###ACCORDION2_TITLE###</h2>
               <span class="accordion__price">5000</span>
               <div class="accordion__description">
-                АВТОРСКИЙ НАДЗОР + КОМПЛЕКТАЦИЯ
+                ###ACCORDION2_DESCRIPTION###
               </div>
               <div class="accordion__arrow"></div>
             </div>
             <div class="accordion__body body close">
-              <h3 class="body__title">ВИЗУАЛИЗАЦИИ:</h3>
+              <h3 class="body__title">###ACCORDION2_BODY_TITLE1###:</h3>
               <ul class="body__list">
                 <li class="body__item">
-                  Перспективные 3D изображения утвержденного планировочного решения
+                  ###ACCORDION2_BODY_LIST1_ITEM1###
                 </li>
               </ul>
-              <h3 class="body__title">ЧЕРТЕЖИ:</h3>
+              <h3 class="body__title">###ACCORDION2_BODY_TITLE2###</h3>
               <ul class="body__list">
                 <li class="body__item">
-                  Обмерный план до демонтажа
+                  ###ACCORDION2_BODY_LIST2_ITEM1###
                 </li>
                 <li class="body__item">
-                  Обмерный план до демонтажа
+                  ###ACCORDION2_BODY_LIST2_ITEM2###
                 </li>
                 <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
-                </li>
-                <li class="body__item">
-                  Обмерный план до демонтажа
+                  ###ACCORDION2_BODY_LIST2_ITEM3###
                 </li>
               </ul>
-              <h3 class="body__title">ВЕДОМОСТИ:</h3>
+              <h3 class="body__title">###ACCORDION2_BODY_TITLE3###</h3>
               <ul class="body__list">
                 <li class="body__item">
-                  Ведомость чистовой отделки помещений
+                  ###ACCORDION2_BODY_LIST3_ITEM1###
                 </li>
                 <li class="body__item">
-                  Ведомость чистовой отделки помещений
+                  ###ACCORDION2_BODY_LIST3_ITEM2###
                 </li>
                 <li class="body__item">
-                  Ведомость чистовой отделки помещений
-                </li>
-                <li class="body__item">
-                  Ведомость чистовой отделки помещений
-                </li>
-                <li class="body__item">
-                  Ведомость чистовой отделки помещений
+                  ###ACCORDION2_BODY_LIST3_ITEM3###
                 </li>
               </ul>
             </div>
@@ -285,64 +225,64 @@
       </div>
     </section>
     <section id="portfolio" class="portfolio">
-      <h2 class="portfolio__title">ПОРТФОЛИО</h2>
+      <h2 class="portfolio__title" data-content="###PORTFOLIO_TITLE###">###PORTFOLIO_TITLE###</h2>
       <div class="swiper portfolio__swiper">
         <ul class="swiper-wrapper">
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide1.jpg" alt="">
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION1###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide3.jpg" alt="">
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION2###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide2.jpg" alt="">
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION3###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide2.jpg" alt="">
 
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION4###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide1.jpg" alt="">
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION5###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide2.jpg" alt="">
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION6###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide1.jpg" alt="">
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION7###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide2.jpg" alt="">
 
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum dolor sit amet.</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION8###</div>
             </a>
           </li>
           <li class="portfolio__slide swiper-slide">
             <img class="slide-img" src="./img/slider/slide2.jpg" alt="">
 
             <a href="#" class="preview__hover">
-              <div class="preview__title">Lorem ipsum dolor sit amet.</div>
+              <div class="preview__title">###PORTFOLIO_DESCRIPTION9###</div>
             </a>
           </li>
         </ul>
@@ -351,71 +291,71 @@
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide1.jpg" alt="">
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION1###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide3.jpg" alt="">
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION2###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide2.jpg" alt="">
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION3###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide2.jpg" alt="">
 
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION4###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide1.jpg" alt="">
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION5###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide2.jpg" alt="">
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION6###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide1.jpg" alt="">
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION7###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide2.jpg" alt="">
 
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum dolor sit amet.</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION8###</div>
           </a>
         </li>
         <li class="portfolio__preview preview">
           <img class="preview__img" src="./img/slider/slide2.jpg" alt="">
 
           <a href="#" class="preview__hover">
-            <div class="preview__title">Lorem ipsum dolor sit amet.</div>
+            <div class="preview__title">###PORTFOLIO_DESCRIPTION9###</div>
           </a>
         </li>
       </ul>
     </section>
     <footer id="footer" class="footer">
       <div class="container footer__grid">
-        <h2 class="footer__title">ВСТРЕТИМСЯ?</h2>
-        <h3 class="footer__subtitle footer__subtitle_call">ЗВОНИТЕ</h3>
-        <h3 class="footer__subtitle footer__subtitle_write">ПИШИТЕ</h3>
-        <h3 class="footer__subtitle footer__subtitle_come">ПРИЕЗЖАЙТЕ</h3>
+        <h2 class="footer__title">###FOOTER_TITLE###</h2>
+        <h3 class="footer__subtitle footer__subtitle_call">###FOOTER_CALL###</h3>
+        <h3 class="footer__subtitle footer__subtitle_write">###FOOTER_WRITE###</h3>
+        <h3 class="footer__subtitle footer__subtitle_come">###FOOTER_COME###</h3>
         <a href="tel:+79183736004" class="footer__tel">+7 918 373 6004</a>
         <a href="mailto:v.lahtina@mail.ru" class="footer__email">v.lahtina@mail.ru</a>
-        <div class="footer__address">Немецкая деревня</div>
+        <div class="footer__address">###FOOTER_ADDRESS###</div>
         <a href="#" class="footer__by">SHAFEEV</a>
         <a href="#" class="footer__insta"></a>
         <div class="footer__licence">

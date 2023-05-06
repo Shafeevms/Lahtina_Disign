@@ -51,6 +51,8 @@
     font-size: 1.5vmax;
     background-color: rgba(0, 0, 0, 0.05);
     border: 2px solid $gray-light;
+    color: $gray-light;
+    text-transform: uppercase;
     transition: background-color .3s ease-in-out;
 
     &:hover {
