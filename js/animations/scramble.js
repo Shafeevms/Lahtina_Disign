@@ -10,7 +10,7 @@ gsap.to(testElement, {
   duration: 1,
   scrambleText: text,
   scrollTrigger: {
-    trigger: '.portfolio',
+    trigger: '.portfolio__title',
     toggleActions: 'play reset play reset'
   }
 })
