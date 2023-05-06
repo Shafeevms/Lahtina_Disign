@@ -1,0 +1,67 @@
+@import "../color.scss";
+
+.modal {
+  position: absolute;
+  display: flex;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 1);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 999;
+
+  &__content {
+    padding: 45px;
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+
+  &__img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__close {
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 5px;
+
+    &:before, &:after  {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 45%;
+      height: 2px;
+      width: 100%;
+      background-color: $gold;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__swiper{
+    height: 80%;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+
+  }
+}
