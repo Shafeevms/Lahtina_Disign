@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-<!--  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>-->
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-<!--  <link rel="manifest" href="/img/favicon/site.webmanifest">-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
@@ -27,14 +25,14 @@
               <li class="options__name"><a class="options__link" data-content="###HEADER_MENU_CONTACTS###" href="#footer">###HEADER_MENU_CONTACTS###</a></li>
             </ul>
             <img class="header__logo" src="img/logo/logo_white.png" alt="логотип">
-            <div class="header__lang" href="###SWITCH_LANG_URL###"></div>
+            <a class="header__lang" href="###SWITCH_LANG_URL###"></a>
           </div>
         </header>
         <div class="hero__wrapper">
           <h1 class="visually-hidden">###HERO_H1###</h1>
           <h2 class="hero__title hero__title_1">###HERO_TITLE1###</h2>
           <h2 class="hero__title">###HERO_TITLE2###</h2>
-          <button class="hero__link">###HERO_BUTTON###</button>
+          <a href="https://api.whatsapp.com/send?phone=79086784577=&text=Здравствуйте, Виктория, хочу обсудить проект" class="hero__link">###HERO_BUTTON###</a>
         </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
@@ -358,7 +356,7 @@
         <a href="tel:+79183736004" class="footer__tel">+7 918 373 6004</a>
         <a href="mailto:v.lahtina@mail.ru" class="footer__email">v.lahtina@mail.ru</a>
         <div class="footer__address">###FOOTER_ADDRESS###</div>
-        <a href="#" class="footer__by">SHAFEEV</a>
+        <a href="https://api.whatsapp.com/send?phone=79086784577=&text=Привет, хочу заказать сайт)" class="footer__by">SHAFEEV</a>
         <a href="#" class="footer__insta"></a>
         <div class="footer__licence">
           <svg class="footer__svg" width="100.63" height="7.2" viewBox="0 0 100.63 7.2"
@@ -374,12 +372,6 @@
       </div>
     </footer>
   </div>
-<!--  <div class="modal">-->
-<!--    <div class="modal__content">-->
-<!--      <button class="modal__close"></button>-->
-<!--      <div class="modal__swiper"></div>-->
-<!--    </div>-->
-<!--  </div>-->
 </div>
 
 <script type="module" src="/js/main.js"></script>

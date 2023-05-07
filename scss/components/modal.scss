@@ -9,6 +9,8 @@
   align-items: center;
   overflow: hidden;
   z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 
   &__content {
     padding: 45px;
@@ -64,4 +66,8 @@
     text-align: center;
 
   }
+}
+
+.visible {
+  opacity: 1;
 }

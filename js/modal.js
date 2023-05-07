@@ -30,7 +30,8 @@ const createModalWindow = (title) => {
   div.addEventListener('click', (e) => {
     e.preventDefault();
     if (e.target.classList.contains('modal__close')) {
-      div.remove();
+      div.classList.remove('visible');
+      setTimeout(() => div.remove(), 300);
     }
   });
 
@@ -43,23 +44,13 @@ export const openModal = (collection, title) => {
 
   modalContainer.appendChild(modal);
 
+
   const modalSwiper = new Swiper(swiperContainer, {
     autoplay: true,
     speed: 1500,
     loop: true,
     slidesPerView: 1,
     spaceBetween: 3,
-    // breakpoints: {
-    //   240: {
-    //     slidesPerView: 1,
-    //   },
-    //   570: {
-    //     slidesPerView: 2,
-    //   },
-    //   840: {
-    //     slidesPerView: 3,
-    //   }
-    // },
     scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
@@ -68,4 +59,5 @@ export const openModal = (collection, title) => {
 
   modalSwiper.addSlide(1, createProjectSlides(collection, projectsImg));
   modalSwiper.update();
+  modal.classList.add('visible');
 };
